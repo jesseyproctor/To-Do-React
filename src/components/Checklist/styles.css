@@ -1,0 +1,24 @@
+.check-list {
+  display: inline-block;
+  width: 76%;
+  margin-bottom: 0;
+  max-height: 74vh;
+  overflow: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.check-list::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.check-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.check-list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.check-list::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}

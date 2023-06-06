@@ -1,0 +1,113 @@
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(43, 34, 34);
+  color: rgb(226, 218, 218);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 30%;
+  padding: 10px;
+
+  @media (max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media (max-width: 700px) {
+    width: 90%;
+  }
+}
+
+.label-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.label:hover .label-text {
+  white-space: normal;
+}
+
+.label.checked {
+  text-decoration: line-through;
+}
+
+.checklist-item-container {
+  margin: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(43, 34, 34);
+  border: 2px solid rgb(226, 218, 218);
+  border-radius: 20px;
+  outline: none;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.custom-checkbox:checked {
+  background-color: rgb(226, 218, 218);
+}
+
+.star-checkbox {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+  position: relative;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.star-checkbox::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(226, 218, 218);
+  border: 2px solid rgb(226, 218, 218);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transition: background-color 0.3s;
+}
+
+.star-checkbox:checked::before {
+  background-color: rgb(197, 181, 92);
+}
+
+.label .custom-checkbox {
+  margin-right: 5px;
+}
+
+.trash-icon-container {
+  display: flex;
+  justify-content: flex-end;
+}
